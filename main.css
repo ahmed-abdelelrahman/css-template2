@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  counter-reset: section;
+}
+
+ul {
+  width: 80%;
+  margin: auto;
+  list-style-type: none;
+}
+ul li {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+ul li dd {
+  margin-left: 0;
+  margin-top: 10px;
+}
+ul li::before {
+  counter-increment: section;
+  content: counter(section);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(197, 193, 193);
+  color: white;
+  left: -50px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+ul li:last-child {
+  color: white;
+  background-image: linear-gradient(to right, rgb(0, 96, 128), green);
+  text-align: center;
+  padding: 50px;
+  font-size: xx-large;
+}
+ul li:last-child::before {
+  content: "=";
+  background: linear-gradient(to right, rgb(0, 96, 128), green);
+  font-size: 25px;
+  border-radius: 5px;
+}/*# sourceMappingURL=main.css.map */
